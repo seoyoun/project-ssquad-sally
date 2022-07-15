@@ -12,7 +12,7 @@ class AppTestCase(unittest.TestCase):
         response = self.client.get("/")
         assert response.status_code == 200
         html = response.get_data(as_text=True)
-        assert "<title>{{ title }}</title>" in html
+        assert "<title>MLH Fellow</title>" in html
         response = self.client.get("/")
 
         assert response.status_code == 200
