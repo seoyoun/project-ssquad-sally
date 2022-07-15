@@ -26,7 +26,7 @@ class TimelinePost(Model):
         database = mydb
 
 mydb.connect()
-mydb.create_tables([TimelinePost])
+mydb.create_tables([TimelinePost], safe=True)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
